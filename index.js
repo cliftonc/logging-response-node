@@ -40,10 +40,6 @@ let logger = async (req, res, next) => {
     errorMessage = error.message;
   });
 
-  res.on('close', () => {
-    errorMessage = `${req.method} ${req.originalUrl} [CLOSED]`
-  });
-
   // Capture response finished
   res.on("finish", async () => {
 

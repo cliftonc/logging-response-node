@@ -1,0 +1,31 @@
+{
+  "name": "logging-response-node",
+  "version": "1.0.0",
+  "description": "Some basics of node servers",
+  "main": "index.js",
+  "scripts": {
+    "dev": "NODE_ENV=development node index",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:dev": "nodemon"
+  },
+  "author": "",
+  "license": "MIT",
+  "nodemonConfig": {
+    "exec": "npm run dev",
+    "watch": [
+      "index.js"
+    ],
+    "ignore": [
+      "**/__tests__/**",
+      "*.test.js",
+      "*.spec.js"
+    ]
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.2",
+    "superagent": "^5.2.2",
+    "uuid": "^7.0.2"
+  }
+}
